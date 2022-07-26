@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe ViewComponent::Storybook::Controls::DateConfig do
-  subject { described_class.new(default_value, param: param, name: name) }
+  subject { described_class.new(default_value, param: param, name: name, description: description) }
 
   shared_examples "valid with object value" do
     it "has a value" do
@@ -24,7 +24,7 @@ RSpec.describe ViewComponent::Storybook::Controls::DateConfig do
             button_text: expected_csf_value,
           },
           argTypes: {
-            button_text: { control: { type: type }, name: "Button Text" },
+            button_text: { control: { type: type }, name: "Button Text", description: nil },
           },
         }
       )

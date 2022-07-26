@@ -202,7 +202,7 @@ RSpec.describe ViewComponent::Storybook::StoryConfig do
               title: "OK"
             },
             argTypes: {
-              title: { control: { type: :text }, name: "Title" }
+              title: { control: { type: :text }, name: "Title", description: nil }
             }
           }
         )
@@ -252,7 +252,7 @@ RSpec.describe ViewComponent::Storybook::StoryConfig do
               title: "OK"
             },
             argTypes: {
-              title: { control: { type: :text }, name: "Title" }
+              title: { control: { type: :text }, name: "Title", description: nil }
             }
           }
         )
@@ -279,7 +279,7 @@ RSpec.describe ViewComponent::Storybook::StoryConfig do
               message: "Hello World!"
             },
             argTypes: {
-              message: { control: { type: :text }, name: "Message" }
+              message: { control: { type: :text }, name: "Message", description: nil }
             }
           }
         )
@@ -306,7 +306,7 @@ RSpec.describe ViewComponent::Storybook::StoryConfig do
               items0: "OK"
             },
             argTypes: {
-              items0: { control: { type: :text }, name: "Items0" }
+              items0: { control: { type: :text }, name: "Items0", description: nil }
             }
           }
         )
@@ -462,7 +462,8 @@ RSpec.describe ViewComponent::Storybook::StoryConfig do
                   control: {
                     type: :boolean
                   },
-                  name: "Item1  Highlighted"
+                  name: "Item1  Highlighted",
+                  description: nil
                 }
               }
             }
@@ -490,7 +491,8 @@ RSpec.describe ViewComponent::Storybook::StoryConfig do
                   control: {
                     type: :text
                   },
-                  name: "Example  Title"
+                  name: "Example  Title",
+                  description: nil
                 }
               }
             }

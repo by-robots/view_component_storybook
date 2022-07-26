@@ -33,7 +33,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               content: "Hello World!"
             },
             argTypes: {
-              content: { control: { type: :text }, name: "Content" }
+              content: { control: { type: :text }, name: "Content", description: nil }
             }
           },
           {
@@ -73,9 +73,9 @@ RSpec.describe ViewComponent::Storybook::Stories do
               other_param: true,
             },
             argTypes: {
-              message: { control: { type: :text }, name: "Message" },
-              param: { control: { type: :number }, name: "Param" },
-              other_param: { control: { type: :boolean }, name: "Other Param" },
+              message: { control: { type: :text }, name: "Message", description: nil },
+              param: { control: { type: :number }, name: "Param", description: nil },
+              other_param: { control: { type: :boolean }, name: "Other Param", description: nil },
             }
           },
           {
@@ -87,7 +87,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               message: "Hello World!"
             },
             argTypes: {
-              message: { control: { type: :text }, name: "Message" }
+              message: { control: { type: :text }, name: "Message", description: nil }
             }
           },
           {
@@ -100,8 +100,8 @@ RSpec.describe ViewComponent::Storybook::Stories do
               param: 1,
             },
             argTypes: {
-              my_message: { control: { type: :text }, name: "My Message" },
-              param: { control: { type: :number }, name: "Param" },
+              my_message: { control: { type: :text }, name: "My Message", description: nil },
+              param: { control: { type: :number }, name: "Param", description: nil },
             }
           }
         ]
@@ -122,8 +122,8 @@ RSpec.describe ViewComponent::Storybook::Stories do
               items1: "How you doing?",
             },
             argTypes: {
-              items0: { control: { type: :text }, name: "Items0" },
-              items1: { control: { type: :text }, name: "Items1" },
+              items0: { control: { type: :text }, name: "Items0", description: nil },
+              items1: { control: { type: :text }, name: "Items1", description: nil },
             }
           },
           {
@@ -135,7 +135,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               items0: "Hello World!"
             },
             argTypes: {
-              items0: { control: { type: :text }, name: "Items0" }
+              items0: { control: { type: :text }, name: "Items0", description: nil }
             }
           },
           {
@@ -148,8 +148,8 @@ RSpec.describe ViewComponent::Storybook::Stories do
               items1: "How you doing?",
             },
             argTypes: {
-              message: { control: { type: :text }, name: "Message" },
-              items1: { control: { type: :text }, name: "Items1" },
+              message: { control: { type: :text }, name: "Message", description: nil },
+              items1: { control: { type: :text }, name: "Items1", description: nil },
             }
           }
         ]
@@ -170,8 +170,8 @@ RSpec.describe ViewComponent::Storybook::Stories do
               message: "How you doing?",
             },
             argTypes: {
-              title: { control: { type: :text }, name: "Title" },
-              message: { control: { type: :text }, name: "Message" },
+              title: { control: { type: :text }, name: "Title", description: nil },
+              message: { control: { type: :text }, name: "Message", description: nil },
             }
           },
           {
@@ -197,7 +197,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "OK"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           }
         ]
@@ -223,20 +223,20 @@ RSpec.describe ViewComponent::Storybook::Stories do
               favorite_food: "Ice Cream",
               mood: :happy,
               other_things: { eyes: "Blue", hair: "Brown" }
-
             },
             argTypes: {
-              name: { control: { type: :text }, name: "Name" },
-              birthday: { control: { type: :date }, name: "Birthday" },
-              favorite_color: { control: { type: :color }, name: "Favorite Color" },
-              like_people: { control: { type: :boolean }, name: "Like People" },
-              number_pets: { control: { type: :number }, name: "Number Pets" },
-              sports: { control: { type: :object }, name: "Sports" },
+              name: { control: { type: :text }, name: "Name", description: nil },
+              birthday: { control: { type: :date }, name: "Birthday", description: nil },
+              favorite_color: { control: { type: :color }, name: "Favorite Color", description: nil },
+              like_people: { control: { type: :boolean }, name: "Like People", description: nil },
+              number_pets: { control: { type: :number }, name: "Number Pets", description: nil },
+              sports: { control: { type: :object }, name: "Sports", description: nil },
               favorite_food: {
                 control: {
                   type: :select,
                 },
                 name: "Favorite Food",
+                description: nil,
                 options: ["Burgers", "Hot Dog", "Ice Cream", "Pizza"]
               },
               mood: {
@@ -245,9 +245,10 @@ RSpec.describe ViewComponent::Storybook::Stories do
                   labels: { happy: "Happy", sad: "Sad", angry: "Angry", content: "Content" },
                 },
                 name: "Mood",
+                description: nil,
                 options: [:happy, :sad, :angry, :content]
               },
-              other_things: { control: { type: :object }, name: "Other Things" },
+              other_things: { control: { type: :object }, name: "Other Things", description: nil },
             }
           }
         ]
@@ -267,7 +268,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "OK"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           },
           {
@@ -279,7 +280,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "Push Me!"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           },
           {
@@ -291,7 +292,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "Really Really Long Button Text"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           }
         ]
@@ -311,7 +312,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               heading_text: "Heading"
             },
             argTypes: {
-              heading_text: { control: { type: :text }, name: "Heading Text" }
+              heading_text: { control: { type: :text }, name: "Heading Text", description: nil }
             }
           }
         ]
@@ -332,7 +333,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "OK"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           },
           {
@@ -346,7 +347,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "OK"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           },
           {
@@ -359,7 +360,7 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text: "OK"
             },
             argTypes: {
-              button_text: { control: { type: :text }, name: "Button Text" }
+              button_text: { control: { type: :text }, name: "Button Text", description: nil }
             }
           }
         ]
@@ -380,8 +381,8 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text__name: "Sarah"
             },
             argTypes: {
-              button_text__greeting: { control: { type: :text }, name: "Button Text  Greeting" },
-              button_text__name: { control: { type: :text }, name: "Button Text  Name" }
+              button_text__greeting: { control: { type: :text }, name: "Button Text  Greeting", description: nil },
+              button_text__name: { control: { type: :text }, name: "Button Text  Name", description: nil }
             }
           },
           {
@@ -396,10 +397,10 @@ RSpec.describe ViewComponent::Storybook::Stories do
               items1__noun: "Boat",
             },
             argTypes: {
-              items0__verb: { control: { type: :text }, name: "Items0  Verb" },
-              items0__noun: { control: { type: :text }, name: "Items0  Noun" },
-              items1__verb: { control: { type: :text }, name: "Items1  Verb" },
-              items1__noun: { control: { type: :text }, name: "Items1  Noun" }
+              items0__verb: { control: { type: :text }, name: "Items0  Verb", description: nil },
+              items0__noun: { control: { type: :text }, name: "Items0  Noun", description: nil },
+              items1__verb: { control: { type: :text }, name: "Items1  Verb", description: nil },
+              items1__noun: { control: { type: :text }, name: "Items1  Noun", description: nil }
             }
           },
           {
@@ -413,9 +414,9 @@ RSpec.describe ViewComponent::Storybook::Stories do
               button_text__name__last_name: "Connor"
             },
             argTypes: {
-              button_text__greeting: { control: { type: :text }, name: "Button Text  Greeting" },
-              button_text__name__first_name: { control: { type: :text }, name: "Button Text  Name  First Name" },
-              button_text__name__last_name: { control: { type: :text }, name: "Button Text  Name  Last Name" }
+              button_text__greeting: { control: { type: :text }, name: "Button Text  Greeting", description: nil },
+              button_text__name__first_name: { control: { type: :text }, name: "Button Text  Name  First Name", description: nil },
+              button_text__name__last_name: { control: { type: :text }, name: "Button Text  Name  Last Name", description: nil }
             }
           }
         ]
@@ -440,12 +441,12 @@ RSpec.describe ViewComponent::Storybook::Stories do
               footer__classes: "text-blue"
             },
             argTypes: {
-              classes: { control: { type: :text }, name: "Classes" },
-              subtitle__content: { control: { type: :text }, name: "Subtitle  Content" },
-              tab2__content: { control: { type: :text }, name: "Tab2  Content" },
-              item2__highlighted: { control: { type: :boolean }, name: "Item2  Highlighted" },
-              item3__content: { control: { type: :text }, name: "Item3  Content" },
-              footer__classes: { control: { type: :text }, name: "Footer  Classes" }
+              classes: { control: { type: :text }, name: "Classes", description: nil },
+              subtitle__content: { control: { type: :text }, name: "Subtitle  Content", description: nil },
+              tab2__content: { control: { type: :text }, name: "Tab2  Content", description: nil },
+              item2__highlighted: { control: { type: :boolean }, name: "Item2  Highlighted", description: nil },
+              item3__content: { control: { type: :text }, name: "Item3  Content", description: nil },
+              footer__classes: { control: { type: :text }, name: "Footer  Classes", description: nil }
             }
           }
         ]
@@ -508,7 +509,8 @@ RSpec.describe ViewComponent::Storybook::Stories do
                     "control": {
                       "type": "text"
                     },
-                    "name": "Content"
+                    "name": "Content",
+                    "description": null
                   }
                 }
               },
